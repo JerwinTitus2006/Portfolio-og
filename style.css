@@ -1,0 +1,741 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: black;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.logo {
+    font-size: 3rem;
+    color: #ff0000;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: white;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ff0000;
+    border-bottom: 3px solid #ff0000;
+}
+
+
+/* Services section */
+.services {
+  padding: 80px 20px;
+  background: #000; /* black background to highlight neon effect */
+  text-align: center;
+}
+
+.services .section-title h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #ff0000;
+  text-shadow: 0 0 3px #ff0000, 0 0 6px #ff0000, 0 0 10px #ff0000;
+}
+
+.services .section-title p {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 50px;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-box {
+  background: #111;
+  padding: 50px 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000 inset;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-box i {
+  font-size: 3rem;
+  color: #ff0000;
+  margin-bottom: 25px;
+  text-shadow: 0 0 3px #ff0000, 0 0 6px #ff0000;
+}
+
+.service-box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ff0000;
+  text-shadow: 0 0 3px #ff0000;
+}
+
+.service-box p {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Hover animation */
+.service-box:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 8px #ff0000, 0 0 15px #ff0000 inset;
+}
+
+.service-box:hover i {
+  color: #fff;
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+}
+
+.service-box:hover h3 {
+  color: #fff;
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+}
+
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 3px #ff0000, 0 0 6px #ff0000;
+  }
+  50% {
+    text-shadow: 0 0 6px #ff0000, 0 0 12px #ff0000;
+  }
+  100% {
+    text-shadow: 0 0 3px #ff0000, 0 0 6px #ff0000;
+  }
+}
+
+/* Skills section */
+.skills {
+  padding: 80px 20px;
+  background: #000;
+  text-align: center;
+}
+
+.skills .section-title h1 {
+  font-size: 3rem;
+  color: #ff0000;
+  margin-bottom: 10px;
+  text-shadow: 0 0 3px #ff0000, 0 0 6px #ff0000;
+}
+
+.skills .section-title p {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 50px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.skill-box {
+  background: #111;
+  border-radius: 15px;
+  padding: 35px 15px;
+  box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000 inset;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-box i {
+  font-size: 3.2rem; /* bigger icon */
+  color: #ff0000;
+  margin-bottom: 10px;
+  text-shadow: 0 0 3px #ff0000, 0 0 6px #ff0000;
+  animation: pulse 2s infinite;
+}
+
+.skill-box span {
+  display: block;
+  color: #ff0000;
+  font-size: 1.2rem;
+  margin-top: 5px;
+  text-shadow: 0 0 2px #ff0000;
+  font-weight: 600;
+  animation: pulse 2s infinite;
+}
+
+.skill-box p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+/* Hover effect */
+.skill-box:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 8px #ff0000, 0 0 15px #ff0000 inset;
+}
+
+.skill-box:hover i,
+.skill-box:hover span {
+  color: #fff;
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+}
+
+
+/* Education section */
+.education {
+  padding: 90px 20px;
+  background: #000;
+  text-align: center;
+}
+
+.education .section-title h1 {
+  font-size: 3.2rem;  /* slightly bigger */
+  color: #ff0000;
+  margin-bottom: 12px;
+  text-shadow: 0 0 4px #ff0000, 0 0 8px #ff0000;
+}
+
+.education .section-title p {
+  font-size: 1.3rem;  /* bigger subtitle */
+  color: #ddd;
+  margin-bottom: 35px;
+}
+
+.education-description p {
+  font-size: 1.1rem;  /* bigger text */
+  color: #ccc;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  line-height: 1.7;
+}
+
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.education-box {
+  background: #111;
+  padding: 45px 25px;  /* bigger card */
+  border-radius: 15px;
+  box-shadow: 0 0 6px #ff0000, 0 0 12px #ff0000 inset;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-box i {
+  font-size: 3.4rem;  /* bigger icon */
+  color: #ff0000;
+  margin-bottom: 18px;
+  text-shadow: 0 0 4px #ff0000, 0 0 8px #ff0000;
+  animation: pulse 2s infinite;
+}
+
+.education-box h3 {
+  font-size: 1.8rem;  /* bigger heading */
+  color: #ff0000;
+  margin-bottom: 10px;
+  text-shadow: 0 0 3px #ff0000;
+}
+
+.education-box span {
+  display: block;
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.education-box p {
+  color: #aaa;
+  font-size: 1rem;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+/* Hover effect */
+.education-box:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 10px #ff0000, 0 0 18px #ff0000 inset;
+}
+
+.education-box:hover h3,
+.education-box:hover i {
+  color: #fff;
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+}
+
+
+
+/* Experience section */
+.experience {
+  padding: 90px 20px;
+  background: #000;
+  text-align: center;
+}
+
+.experience .section-title h1 {
+  font-size: 3.2rem;  /* bigger title */
+  color: #ff0000;
+  margin-bottom: 12px;
+  text-shadow: 0 0 4px #ff0000, 0 0 8px #ff0000;
+}
+
+.experience .section-title p {
+  font-size: 1.3rem;  /* bigger subtitle */
+  color: #ddd;
+  margin-bottom: 40px;
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.experience-box {
+  background: #111;
+  padding: 45px 25px;  /* bigger card */
+  border-radius: 15px;
+  box-shadow: 0 0 6px #ff0000, 0 0 12px #ff0000 inset;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-box i {
+  font-size: 3.4rem;  /* bigger icon */
+  color: #ff0000;
+  margin-bottom: 18px;
+  text-shadow: 0 0 4px #ff0000, 0 0 8px #ff0000;
+  animation: pulse 2s infinite;
+}
+
+.experience-box h3 {
+  font-size: 1.8rem;  /* bigger heading */
+  color: #ff0000;
+  margin-bottom: 10px;
+  text-shadow: 0 0 3px #ff0000;
+}
+
+.experience-box span {
+  display: block;
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.experience-box p {
+  color: #aaa;
+  font-size: 1.05rem;  /* slightly bigger text */
+  line-height: 1.6;
+}
+
+/* Hover effect */
+.experience-box:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 10px #ff0000, 0 0 18px #ff0000 inset;
+}
+
+.experience-box:hover h3,
+.experience-box:hover i {
+  color: #fff;
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+}
+
+
+/* Contact section */
+.contact {
+  padding: 90px 20px;
+  background: #000;
+  text-align: center;
+}
+
+.contact .section-title h1 {
+  font-size: 3.2rem;
+  color: #ff0000;
+  margin-bottom: 12px;
+  text-shadow: 0 0 4px #ff0000, 0 0 8px #ff0000;
+}
+
+.contact .section-title p {
+  font-size: 1.3rem;
+  color: #ddd;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 35px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-box {
+  background: #111;
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 6px #ff0000, 0 0 12px #ff0000 inset;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-box i {
+  font-size: 3.4rem;
+  color: #ff0000;
+  margin-bottom: 15px;
+  text-shadow: 0 0 4px #ff0000, 0 0 8px #ff0000;
+  animation: pulse 2s infinite;
+}
+
+.contact-box h3 {
+  font-size: 1.6rem;
+  color: #ff0000;
+  margin-bottom: 8px;
+  text-shadow: 0 0 3px #ff0000;
+}
+
+.contact-box p {
+  color: #ccc;
+  font-size: 1.1rem;
+  word-wrap: break-word;
+}
+
+/* Hover effect */
+.contact-box:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 10px #ff0000, 0 0 18px #ff0000 inset;
+}
+
+.contact-box:hover h3,
+.contact-box:hover i {
+  color: #fff;
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+}
+
+.contact-buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-buttons .btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  background: #ff0000;
+  border-radius: 8px;
+  text-shadow: 0 0 3px #ff0000;
+  box-shadow: 0 0 6px #ff0000, 0 0 10px #ff0000 inset;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-buttons .btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 0 10px #ff0000, 0 0 18px #ff0000 inset;
+}
+
+
+@media(max-width:995px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        display: none;
+        top: 5rem;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #ff0000;
+        border-bottom: 3px solid #ff0000;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #ff0000;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: #ff0000;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.home-img img {
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #ff0000;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #ff0000;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #ff0000;
+}
+
+.social-icons a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #ff0000;
+    box-shadow: 0 0 25px #ff0000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #ff0000;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #ff0000;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale3d(1.03);
+    background-color: #ff0000;
+    color: black;
+    box-shadow: 0 0 25px #ff0000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
